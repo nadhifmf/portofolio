@@ -65,6 +65,33 @@
       margin: 0;
       font-size: 1rem;
     }
+    /* Project Details Styling */
+    .project-details {
+      background-color: #1e1e1e;
+      border: 1px solid #333;
+      border-radius: 10px;
+      padding: 15px;
+      margin-top: 10px;
+    }
+    .project-details h6 {
+      margin-bottom: 10px;
+      color: #bb86fc;
+    }
+    .project-details ul {
+      list-style: none;
+      padding: 0;
+    }
+    .project-details li {
+      margin-bottom: 5px;
+    }
+    .project-details i {
+      color: #bb86fc;
+      margin-right: 10px;
+    }
+    .project-details a {
+      color: #bb86fc;
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -86,6 +113,38 @@
         <p class="lead">
           Hello! I'm <strong>[Your Name]</strong>, a [Your Profession, e.g., Software Engineer] based in [Your Location]. I specialize in [list your key skills], and I'm always eager to learn and grow. When I'm not coding, you can find me [insert hobbies or interests].
         </p>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="mb-5">
+      <h2 class="section-title">📂 Projects</h2>
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title"><a href="[Link to GitHub Repo]" class="text-decoration-none">[Project Title]</a></h5>
+              <p class="card-text">[Short description of the project]</p>
+              <div class="project-details">
+                <h6><i class="fas fa-cogs"></i> Tech Stack</h6>
+                <ul>
+                  <li>[Language 1]</li>
+                  <li>[Framework/Library 1]</li>
+                  <li>[Tool/Platform 1]</li>
+                </ul>
+                <h6><i class="fas fa-list-ul"></i> Features</h6>
+                <ul>
+                  <li>[Feature 1]</li>
+                  <li>[Feature 2]</li>
+                  <li>[Feature 3]</li>
+                </ul>
+                <h6><i class="fas fa-external-link-alt"></i> Live Demo</h6>
+                <a href="[Link to live demo]" target="_blank">[Live Demo]</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Repeat for other projects -->
       </div>
     </section>
 
@@ -120,6 +179,29 @@
       </div>
     </section>
 
+    <!-- Achievements -->
+    <section class="mb-5">
+      <h2 class="section-title">🏆 Achievements</h2>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item bg-transparent text-light">[Achievement 1, e.g., "Winner of XYZ Hackathon"]</li>
+        <li class="list-group-item bg-transparent text-light">[Achievement 2, e.g., "Published research paper on ABC topic"]</li>
+        <li class="list-group-item bg-transparent text-light">[Achievement 3, e.g., "Contributed to open-source project DEF"]</li>
+      </ul>
+    </section>
+
+    <!-- Stats -->
+    <section class="mb-5">
+      <h2 class="section-title">📈 Stats</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-6 stats">
+          <img src="https://github-readme-stats.vercel.app/api?username=nadhifmf&show_icons=true&theme=dark" alt="GitHub Stats" class="img-fluid rounded">
+        </div>
+        <div class="col-md-6 stats">
+          <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=nadhifmf&layout=compact&theme=dark" alt="Top Languages" class="img-fluid rounded">
+        </div>
+      </div>
+    </section>
+
     <!-- Contact -->
     <section class="mb-5">
       <h2 class="section-title">📧 Contact Me</h2>
@@ -139,56 +221,6 @@
         <div class="d-flex align-items-center">
           <i class="fas fa-envelope"></i>
           <p><strong>Reach me:</strong> <a href="mailto:your.email@example.com" class="text-primary">your.email@example.com</a></p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects -->
-    <section class="mb-5">
-      <h2 class="section-title">📂 Projects</h2>
-      <div class="row">
-        <div class="col-md-6 mb-4">
-          <div class="card shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title"><a href="[Link to GitHub Repo]" class="text-decoration-none">[Project Title]</a></h5>
-              <p class="card-text">[Short description of the project]</p>
-              <ul class="list-unstyled small text-muted">
-                <li><strong>Tech Stack:</strong> [List technologies used]</li>
-                <li><strong>Features:</strong>
-                  <ul class="list-unstyled">
-                    <li>Feature 1</li>
-                    <li>Feature 2</li>
-                    <li>Feature 3</li>
-                  </ul>
-                </li>
-                <li><strong>Live Demo:</strong> <a href="[Link to live demo]" class="text-primary">[Live Demo]</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <!-- Repeat for other projects -->
-      </div>
-    </section>
-
-    <!-- Achievements -->
-    <section class="mb-5">
-      <h2 class="section-title">🏆 Achievements</h2>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item bg-transparent text-light">[Achievement 1, e.g., "Winner of XYZ Hackathon"]</li>
-        <li class="list-group-item bg-transparent text-light">[Achievement 2, e.g., "Published research paper on ABC topic"]</li>
-        <li class="list-group-item bg-transparent text-light">[Achievement 3, e.g., "Contributed to open-source project DEF"]</li>
-      </ul>
-    </section>
-
-    <!-- Stats -->
-    <section class="mb-5">
-      <h2 class="section-title">📈 Stats</h2>
-      <div class="row justify-content-center">
-        <div class="col-md-6 stats">
-          <img src="https://github-readme-stats.vercel.app/api?username=YOUR_GITHUB_USERNAME&show_icons=true&theme=dark" alt="GitHub Stats" class="img-fluid rounded">
-        </div>
-        <div class="col-md-6 stats">
-          <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=YOUR_GITHUB_USERNAME&layout=compact&theme=dark" alt="Top Languages" class="img-fluid rounded">
         </div>
       </div>
     </section>
