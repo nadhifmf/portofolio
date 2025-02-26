@@ -167,20 +167,11 @@
     <section class="mb-5">
       <h2 class="section-title">📈 Stats</h2>
       <div class="row justify-content-center">
-        <!-- GitHub Stats -->
         <div class="col-md-6 stats">
-          <h5 class="text-center text-secondary mb-3">GitHub Stats</h5>
           <img src="https://github-readme-stats.vercel.app/api?username=nadhifmf&show_icons=true&theme=dark" alt="GitHub Stats" class="img-fluid rounded">
         </div>
-        <!-- GitLab Stats -->
         <div class="col-md-6 stats">
-          <h5 class="text-center text-secondary mb-3">GitLab Stats</h5>
-          <div class="bg-dark text-light p-4 rounded">
-            <p><strong>Total Contributions:</strong> <span id="gitlab-contributions">Loading...</span></p>
-            <p><strong>Projects Created:</strong> <span id="gitlab-projects">Loading...</span></p>
-            <p><strong>Merge Requests:</strong> <span id="gitlab-mrs">Loading...</span></p>
-            <p><strong>Total Commits (Last Year):</strong> <span id="gitlab-commits-last-year">Loading...</span></p>
-          </div>
+          <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=nadhifmf&layout=compact&theme=dark" alt="Top Languages" class="img-fluid rounded">
         </div>
       </div>
     </section>
@@ -231,88 +222,5 @@
 
   <!-- Bootstrap JS (Optional) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- GitLab Stats Script -->
-  <script>
-    // Replace with your GitLab username and access token
-    const gitlabUsername = "nmfauzan";
-    // Retrieve the GitLab Access Token from the environment variable
-    const gitlabAccessToken = process.env.GITLAB_ACCESS_TOKEN || "";
-
-    if (!gitlabAccessToken) {
-      console.error("GitLab Access Token is missing. Please ensure GITLAB_ACCESS_TOKEN is set in your environment.");
-      process.exit(1); // Exit the script if the token is not available
-    }
-
-    // Helper function to calculate if a date is within the last year
-    function isWithinLastYear(dateString) {
-      const oneYearAgo = new Date();
-      oneYearAgo.setFullYear(oneYearAgo.getFullYear() - 1);
-      const commitDate = new Date(dateString);
-      return commitDate >= oneYearAgo;
-    }
-
-    // Fetch GitLab stats
-    async function fetchGitLabStats() {
-      try {
-        // Fetch user contributions
-        const contributionsResponse = await fetch(`https://gitlab.com/api/v4/users/${gitlabUsername}/events`, {
-          headers: {
-            Authorization: `Bearer ${gitlabAccessToken}`,
-          },
-        });
-        const contributionsData = await contributionsResponse.json();
-        const totalContributions = contributionsData.length;
-
-        // Fetch user projects
-        const projectsResponse = await fetch(`https://gitlab.com/api/v4/users/${gitlabUsername}/projects`, {
-          headers: {
-            Authorization: `Bearer ${gitlabAccessToken}`,
-          },
-        });
-        const projectsData = await projectsResponse.json();
-        const totalProjects = projectsData.length;
-
-        // Fetch merge requests
-        const mrsResponse = await fetch(`https://gitlab.com/api/v4/merge_requests?author_username=${gitlabUsername}`, {
-          headers: {
-            Authorization: `Bearer ${gitlabAccessToken}`,
-          },
-        });
-        const mrsData = await mrsResponse.json();
-        const totalMRs = mrsData.length;
-
-        // Fetch total commits from the last year
-        let totalCommitsLastYear = 0;
-        for (const project of projectsData) {
-          const projectId = project.id;
-          const commitsResponse = await fetch(
-            `https://gitlab.com/api/v4/projects/${projectId}/repository/commits?per_page=100`,
-            {
-              headers: {
-                Authorization: `Bearer ${gitlabAccessToken}`,
-              },
-            }
-          );
-          const commitsData = await commitsResponse.json();
-          totalCommitsLastYear += commitsData.filter((commit) => isWithinLastYear(commit.committed_date)).length;
-        }
-
-        // Update the DOM
-        document.getElementById("gitlab-contributions").textContent = totalContributions;
-        document.getElementById("gitlab-projects").textContent = totalProjects;
-        document.getElementById("gitlab-mrs").textContent = totalMRs;
-        document.getElementById("gitlab-commits-last-year").textContent = totalCommitsLastYear;
-      } catch (error) {
-        console.error("Error fetching GitLab stats:", error);
-        document.getElementById("gitlab-contributions").textContent = "Error";
-        document.getElementById("gitlab-projects").textContent = "Error";
-        document.getElementById("gitlab-mrs").textContent = "Error";
-        document.getElementById("gitlab-commits-last-year").textContent = "Error";
-      }
-    }
-
-    // Call the function to fetch stats
-    fetchGitLabStats();
-  </script>
 </body>
 </html>
