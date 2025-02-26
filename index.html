@@ -3,24 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
+  <title>My Portfolio - Dark Mode</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom Styles -->
   <style>
     body {
-      background-color: #f8f9fa;
+      background-color: #121212;
+      color: #e0e0e0;
     }
     .profile-pic {
       width: 150px;
       height: 150px;
       border-radius: 50%;
-      border: 4px solid #0d6efd;
+      border: 4px solid #bb86fc; /* Purple accent for dark mode */
     }
     .section-title {
       font-size: 2rem;
       font-weight: bold;
       margin-bottom: 1.5rem;
+      text-align: center;
+      color: #bb86fc; /* Accent color for titles */
+    }
+    .card {
+      background-color: #1e1e1e;
+      border: 1px solid #333;
+    }
+    .card-title a {
+      color: #bb86fc !important; /* Link color in cards */
+    }
+    .card-title a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      background-color: #121212;
+      color: #e0e0e0;
+      padding: 1rem 0;
       text-align: center;
     }
     .stats img {
@@ -28,18 +46,12 @@
       height: auto;
       margin: 10px 0;
     }
-    footer {
-      background-color: #0d6efd;
-      color: #fff;
-      padding: 1rem 0;
-      text-align: center;
-    }
   </style>
 </head>
 <body>
 
   <!-- Header -->
-  <header class="bg-primary text-white py-5 text-center">
+  <header class="bg-dark text-white py-5 text-center">
     <h1 class="display-4">🌟 My Portfolio</h1>
     <p class="lead">Welcome to my GitHub portfolio! Here, you'll find a collection of my projects, skills, and experiences.</p>
   </header>
@@ -69,27 +81,27 @@
       <h2 class="section-title">🛠️ Skills</h2>
       <div class="row">
         <div class="col-md-4">
-          <h5 class="text-center mb-3">Programming Languages</h5>
+          <h5 class="text-center mb-3 text-secondary">Programming Languages</h5>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item">[Language 1]</li>
-            <li class="list-group-item">[Language 2]</li>
-            <li class="list-group-item">[Language 3]</li>
+            <li class="list-group-item bg-transparent text-light">[Language 1]</li>
+            <li class="list-group-item bg-transparent text-light">[Language 2]</li>
+            <li class="list-group-item bg-transparent text-light">[Language 3]</li>
           </ul>
         </div>
         <div class="col-md-4">
-          <h5 class="text-center mb-3">Frameworks & Libraries</h5>
+          <h5 class="text-center mb-3 text-secondary">Frameworks & Libraries</h5>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item">[Framework/Library 1]</li>
-            <li class="list-group-item">[Framework/Library 2]</li>
-            <li class="list-group-item">[Framework/Library 3]</li>
+            <li class="list-group-item bg-transparent text-light">[Framework/Library 1]</li>
+            <li class="list-group-item bg-transparent text-light">[Framework/Library 2]</li>
+            <li class="list-group-item bg-transparent text-light">[Framework/Library 3]</li>
           </ul>
         </div>
         <div class="col-md-4">
-          <h5 class="text-center mb-3">Tools & Platforms</h5>
+          <h5 class="text-center mb-3 text-secondary">Tools & Platforms</h5>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item">[Tool/Platform 1]</li>
-            <li class="list-group-item">[Tool/Platform 2]</li>
-            <li class="list-group-item">[Tool/Platform 3]</li>
+            <li class="list-group-item bg-transparent text-light">[Tool/Platform 1]</li>
+            <li class="list-group-item bg-transparent text-light">[Tool/Platform 2]</li>
+            <li class="list-group-item bg-transparent text-light">[Tool/Platform 3]</li>
           </ul>
         </div>
       </div>
@@ -102,7 +114,7 @@
         <div class="col-md-6 mb-4">
           <div class="card shadow-sm">
             <div class="card-body">
-              <h5 class="card-title"><a href="[Link to GitHub Repo]" class="text-decoration-none text-primary">[Project Title]</a></h5>
+              <h5 class="card-title"><a href="[Link to GitHub Repo]" class="text-decoration-none">[Project Title]</a></h5>
               <p class="card-text">[Short description of the project]</p>
               <ul class="list-unstyled small text-muted">
                 <li><strong>Tech Stack:</strong> [List technologies used]</li>
@@ -126,9 +138,9 @@
     <section class="mb-5">
       <h2 class="section-title">🏆 Achievements</h2>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item">[Achievement 1, e.g., "Winner of XYZ Hackathon"]</li>
-        <li class="list-group-item">[Achievement 2, e.g., "Published research paper on ABC topic"]</li>
-        <li class="list-group-item">[Achievement 3, e.g., "Contributed to open-source project DEF"]</li>
+        <li class="list-group-item bg-transparent text-light">[Achievement 1, e.g., "Winner of XYZ Hackathon"]</li>
+        <li class="list-group-item bg-transparent text-light">[Achievement 2, e.g., "Published research paper on ABC topic"]</li>
+        <li class="list-group-item bg-transparent text-light">[Achievement 3, e.g., "Contributed to open-source project DEF"]</li>
       </ul>
     </section>
 
@@ -137,10 +149,10 @@
       <h2 class="section-title">📈 Stats</h2>
       <div class="row justify-content-center">
         <div class="col-md-6 stats">
-          <img src="https://github-readme-stats.vercel.app/api?username=YOUR_GITHUB_USERNAME&show_icons=true&theme=radical" alt="GitHub Stats" class="img-fluid rounded">
+          <img src="https://github-readme-stats.vercel.app/api?username=YOUR_GITHUB_USERNAME&show_icons=true&theme=dark" alt="GitHub Stats" class="img-fluid rounded">
         </div>
         <div class="col-md-6 stats">
-          <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=YOUR_GITHUB_USERNAME&layout=compact&theme=radical" alt="Top Languages" class="img-fluid rounded">
+          <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=YOUR_GITHUB_USERNAME&layout=compact&theme=dark" alt="Top Languages" class="img-fluid rounded">
         </div>
       </div>
     </section>
