@@ -6,6 +6,8 @@
   <title>My Portfolio - Dark Mode</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome for Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <!-- Custom Styles -->
   <style>
     body {
@@ -46,6 +48,23 @@
       height: auto;
       margin: 10px 0;
     }
+    /* Contact Section Styling */
+    .contact-info {
+      background-color: #1e1e1e;
+      border: 1px solid #333;
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 20px;
+    }
+    .contact-info i {
+      color: #bb86fc;
+      margin-right: 10px;
+      font-size: 1.2rem;
+    }
+    .contact-info p {
+      margin: 0;
+      font-size: 1rem;
+    }
   </style>
 </head>
 <body>
@@ -67,12 +86,6 @@
         <p class="lead">
           Hello! I'm <strong>[Your Name]</strong>, a [Your Profession, e.g., Software Engineer] based in [Your Location]. I specialize in [list your key skills], and I'm always eager to learn and grow. When I'm not coding, you can find me [insert hobbies or interests].
         </p>
-        <ul class="list-unstyled text-muted">
-          <li>🔭 Currently working on: [Project/Job Name]</li>
-          <li>🌱 Learning: [What you're currently learning]</li>
-          <li>💬 Ask me about: [Topics you're knowledgeable about]</li>
-          <li>📫 Reach me: [Your email or contact info]</li>
-        </ul>
       </div>
     </section>
 
@@ -103,6 +116,29 @@
             <li class="list-group-item bg-transparent text-light">[Tool/Platform 2]</li>
             <li class="list-group-item bg-transparent text-light">[Tool/Platform 3]</li>
           </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="mb-5">
+      <h2 class="section-title">📧 Contact Me</h2>
+      <div class="contact-info">
+        <div class="d-flex align-items-center mb-3">
+          <i class="fas fa-binoculars"></i>
+          <p><strong>Currently working on:</strong> [Project/Job Name]</p>
+        </div>
+        <div class="d-flex align-items-center mb-3">
+          <i class="fas fa-seedling"></i>
+          <p><strong>Learning:</strong> [What you're currently learning]</p>
+        </div>
+        <div class="d-flex align-items-center mb-3">
+          <i class="fas fa-comment-dots"></i>
+          <p><strong>Ask me about:</strong> [Topics you're knowledgeable about]</p>
+        </div>
+        <div class="d-flex align-items-center">
+          <i class="fas fa-envelope"></i>
+          <p><strong>Reach me:</strong> <a href="mailto:your.email@example.com" class="text-primary">your.email@example.com</a></p>
         </div>
       </div>
     </section>
@@ -154,16 +190,6 @@
         <div class="col-md-6 stats">
           <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=YOUR_GITHUB_USERNAME&layout=compact&theme=dark" alt="Top Languages" class="img-fluid rounded">
         </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section class="mb-5">
-      <h2 class="section-title">📧 Contact Me</h2>
-      <div class="text-center">
-        <p>Email: <a href="mailto:your.email@example.com" class="text-primary">your.email@example.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" class="text-primary">linkedin.com/in/yourprofile</a></p>
-        <p>Twitter: <a href="https://twitter.com/yourhandle" class="text-primary">@yourhandle</a></p>
       </div>
     </section>
 
